@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CDS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css"
+    href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+
+    body {
+      background-color: white;
+      margin: 30px;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card-detail p {
+      padding-left: 10px;
+    }
+
+    p.dcs-info-label {
+      text-align: left;
+    }
+
+    .dcs-info-items-2 p {
+      font-size: 12px;
+    }
+
+    h7 {
+      font-weight: bold;
+    }
+
+    .col-1 {
+      width: 8.33%;
+    }
+
+    .col-2 {
+      width: 16.66%;
+    }
+
+    .col-3 {
+      width: 25%;
+    }
+
+    .col-4 {
+      width: 33.33%;
+    }
+
+    .col-5 {
+      width: 41.66%;
+    }
+
+    .col-6 {
+      width: 50%;
+    }
+
+    .col-7 {
+      width: 58.33%;
+    }
+
+    .col-8 {
+      width: 66.66%;
+    }
+
+    .col-9 {
+      width: 75%;
+    }
+
+    .col-10 {
+      width: 83.33%;
+    }
+
+    .col-11 {
+      width: 91.66%;
+    }
+
+    .col-12 {
+      width: 100%;
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 2px 2px 0px 2px;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .row .col-4 {
+      margin-right: 10px;
+    }
+
+    .dcs-row {
+      border-bottom: 1px solid #F8F9F8;
+      margin-bottom: 5px;
+    }
+
+    .Header {
+      height: 20%;
+      display: flex;
+    }
+
+    .dcs-info {
+      height: 110%;
+      width: 20%;
+      float: left;
+      min-width: 200px;
+    }
+
+    .dcs-info-right {
+      margin-right: 20px;
+    }
+
+    .dcs-info-items {
+      width: 90%;
+      border-bottom: 3px solid #F8F9F8;
+      display: flex;
+    }
+
+    .dcs-info-addicon {
+      margin-top: 4px;
+      width: 20px;
+      height: 20px;
+      background: url("images.png") no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+    }
+
+    .dcs-info-label {
+      margin-left: 30px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .dcs-service-team {
+      float: left;
+      min-height: 500px;
+      width: 100%;
+      background: url("logo1.png") no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .tile {
+      background-color: antiquewhite;
+      width: 50%;
+      margin: 5px;
+    }
+
+    .mission {
+      width: 60%;
+      float: left;
+    }
+
+    .regions {
+      width: 37.9%;
+    }
+
+    .card {
+      border: 2px solid #dadada;
+      border-radius: 10px;
+    }
+
+    .card-header {
+      padding: 5px;
+      background-color: #f1f1f1;
+      text-align: center;
+      border-bottom: 2px solid #dadada;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-content {
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 20px;
+    }
+
+    .card-detail {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      padding: 3px;
+      margin: 5px 10px 5px 10px;
+    }
+
+    .card-detail-middle {
+      background-color: #e3f0f8;
+    }
+
+    .card-detail-icon {
+      float: left;
+    }
+
+    .cds-col {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      padding: 3px;
+    }
+
+    .cds-card-detail {
+      margin: 10px;
+    }
+
+    form {
+      display: flex;
+    }
+
+    input[type=text] {
+      padding: 10px;
+      border: 1px solid #e5e2e2;
+      border-radius: 10px;
+      float: left;
+      margin-right: 10px;
+      width: 80%;
+    }
+
+    .search-button {
+      width: 20%;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    table.table {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #a6a7a8;
+      border-collapse: collapse;
+    }
+
+    td:nth-child(odd) {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Header">
+    <div class="col-3" style="display: flex;    flex-direction: column;    justify-content: center; padding-left: 50px;
+    gap: 15px;">
+      <div class="row dcs-row">
+        <div class="dcs-col">
+          <p><i class="icon-plus float-left"></i>&nbsp;&nbsp;&nbsp;24/7 Support</p>
+        </div>
+      </div>
+      <div class="row dcs-row">
+        <div class="dcs-col">
+          <p><i class="icon-plus float-left"></i>&nbsp;&nbsp;&nbsp;DCGO Info</p>
+        </div>
+      </div>
+      <div class="row dcs-row">
+        <div class="dcs-col">
+          <p><i class="icon-plus float-left"></i>&nbsp;&nbsp;&nbsp;DCGO Intake</p>
+        </div>
+      </div>
+      <div class="row dcs-row">
+        <div class="dcs-col">
+          <p style="text-align: left;"><i class="icon-plus float-left"></i>&nbsp;&nbsp;&nbsp;Security
+            Incident<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="dcs-service-team"></div>
+    </div>
+    <div class="col-3" style="display: flex;    flex-direction: column;    justify-content: center; padding-left: 50px;
+    gap: 15px;">
+      <div class="cds-col">
+        <p style="text-align: left;">Search DCS Confluence here:</p>
+      </div>
+      <div class="row">
+        <div class="cds-col">
+          <form action="">
+            <input type="text" id="gsearch" name="gsearch">
+            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="cds-col" style="background-color: #ebd5e9;">
+        <div class="cds-card-detail">
+          <p><i class="fa fa-exclamation-triangle card-detil-icon" style="color: grey; float: left"></i></i>DC Emergency
+            Escalation</p>
+        </div>
+      </div>
+      <div class="cds-col" style="background-color: #ebd5e9;">
+        <div class="cds-card-detail">
+          <p><i class="fa fa-exclamation-triangle card-detil-icon" style="color: grey; float: left"></i>Colo Incident
+            Comm Process</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Container" style="margin-top:20px;">
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h7>Systems</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>DCI</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Atlas</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Jira</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>DC Cooling/Temp</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Self-service Apps</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>MOS</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>GoFIx</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Hawkeye</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h7>Resources</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail card-detail-middle">
+                  <p><i class="icon-info float-left card-detail-icon"></i>Support Documentation</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail card-detail-middle">
+                  <p><i class="icon-info float-left card-detail-icon"></i>New Hire Onboarding</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail card-detail-middle">
+                  <p><i class="icon-info float-left card-detail-icon"></i>Search Documentation</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail card-detail-middle">
+                  <p><i class="icon-info float-left card-detail-icon"></i>CDS Communications</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail card-detail-middle">
+                  <p><i class="icon-info float-left card-detail-icon"></i>Training</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail card-detail-middle">
+                  <p><i class="icon-info float-left card-detail-icon"></i>DCGO info</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail card-detail-middle">
+                  <p><i class="icon-info float-left card-detail-icon"></i>Oracle System Handbook</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail card-detail-middle">
+                  <p><i class="icon-info float-left card-detail-icon"></i>TBD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h7>Business</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Objectives</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Region Build Timeline</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>ACR</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Hermes</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Root Cause Analysis</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>Metrics/Dashboards</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>CDS Service Catalog</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-detail">
+                  <p><i class="icon-speech float-left card-detail-icon"></i>TBD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h7>Team mission</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <p>The Cross Domain Solutions Team is responsible for all the day to day Operations
+                of OCI's datacenter footprint. The team focuses on continuous improvement and efficiency
+                using industry best practices to deliver a world class data center experience to
+                OCI's customers and service teams.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 10px;">
+          <div class="card-header">
+            <h7>Leadership Update</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <p style="text-align:left;">CDS team,<br><br>
+                First of all, thank you for your feedback in the recent Your Voice Pulse survey, I value your feedback
+                and aprreciate your taking
+                time to submit it, 84% of CDS completed the survey which is fantastic! In total, there were 422 comments
+                submitted as well.<br><br>
+                The survey asked 9 measurable questions to get a pulse on how things are going with the primary question
+                related to your intent to stay
+                with OCI. Across the board, our results are solid and lead the overall OCI organization. Here is a quick
+                recap of our results compared to
+                the larger OCI organization:
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h7>Regions</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h7>AMER</h7>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-row">
+                      <img src="./amer.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="card">
+                  <div class="card-header">
+                    <h7>APAC</h7>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-row">
+                      <img src="./apac.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card">
+                  <div class="card-header">
+                    <h7>FedRamp</h7>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-row">
+                      <img src="./fedramp.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h7>EMEA</h7>
+                  </div>
+                  <div class="card-content">
+                    <div class="row">
+                      <img src="./emer.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="card">
+                  <div class="card-header">
+                    <h7>ONSR</h7>
+                  </div>
+                  <div class="card-content">
+                    <div class="row">
+                      <img src="./onsr.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card">
+                  <div class="card-header">
+                    <h7>Other</h7>
+                  </div>
+                  <div class="card-content">
+                    <div class="row">
+                      <img src="./other.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:10px;">
+          <div class="card-header">
+            <h7>Contact Information</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <table class="table">
+                <tr>
+                  <th>Name</th>
+                  <th>Title</th>
+                </tr>
+                <tr>
+                  <td>Jim Hawkins</td>
+                  <td>VP Cross Domain Solutions</td>
+                </tr>
+                <tr>
+                  <td>Hans Huberland</td>
+                  <td>Sr Director Cross Domain Solutions</td>
+                </tr>
+                <tr>
+                  <td>Dave Dubinsky</td>
+                  <td>Sr Director Americas Cross Domain Solutions</td>
+                </tr>
+                <tr>
+                  <td>Alan Pearson</td>
+                  <td>Sr Director European Cross Domain Solutions</td>
+                </tr>
+                <tr>
+                  <td>Wei Guo</td>
+                  <td>Sr Director Asia-Pacific Data Centers Operations</td>
+                </tr>
+                <tr>
+                  <td>David Sonne</td>
+                  <td>Asset Management Manager</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h7>CDS PM Corner Spaces</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <p>The Cross Domain Solutions Team is responsible for all the day to day Operations
+                of OCI's datacenter footprint. The team focuses on continuous improvement and efficiency
+                using industry best practices to deliver a world class data center experience to
+                OCI's customers and service teams.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 10px;">
+          <div class="card-header">
+            <h7>Team Metrics</h7>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <p>The Cross Domain Solutions Team is responsible for all the day to day Operations
+                of OCI's datacenter footprint. The team focuses on continuous improvement and efficiency
+                using industry best practices to deliver a world class data center experience to
+                OCI's customers and service teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
